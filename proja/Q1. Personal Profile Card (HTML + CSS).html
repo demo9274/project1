@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Profile Card</title>
+<style>
+body {
+  background: #f3f4f6;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+</style>
+</head>
+<body>
+<div class="card">
+  <img src="https://via.placeholder.com/120" alt="Profile Photo">
+  <h2>Akshay</h2>
+  <p>B.Tech 3rd Year Student | ML Enthusiast | Full Stack Developer</p>
+</div>
+</body>
+</html>

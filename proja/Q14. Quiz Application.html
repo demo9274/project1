@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz App</title>
+<style>
+body { font-family: sans-serif; text-align: center; margin-top: 40px; }
+button { margin-top: 10px; }
+</style>
+<script>
+const questions = [
+  { q: "Which language runs in the browser?", a: "JavaScript", options: ["Python","C++","JavaScript","Java"] },
+  { q: "CSS stands for?", a: "Cascading Style Sheets", options: ["Colorful Style Sheets","Cascading Style Sheets","Computer Style Syntax","Creative Simple Sheets"] },
+  { q: "HTML is used for?", a: "Structuring Web Pages", options: ["Programming","Structuring Web Pages","Compiling Code","Styling Apps"] },
+  { q: "Who invented JS?", a: "Brendan Eich", options: ["Bill Gates","Brendan Eich","Dennis Ritchie","Guido van Rossum"] },
+  { q: "Bootstrap is used for?", a: "Responsive Design", options: ["Database","AI","Responsive Design","Networking"] }
+];
+let index = 0, score = 0;
+function showQuestion() {
+  const q = questions[index];
+  document.getElementById('question').textContent = q.q;
+  const opts = document.getElementById('options');
+  opts.innerHTML = "";
+  q.options.forEach(opt => {
+    const btn = document.createElement('button');
+    btn.textContent = opt;
+    btn.onclick = () => {
+      if (opt === q.a) score++;
+      index++;
+      if (index < questions.length) showQuestion();
+      else document.body.innerHTML = `<h2>Quiz Finished!</h2><p>Your Score: ${score}/${questions.length}</p>`;
+    };
+    opts.appendChild(btn);
+  });
+}
+window.onload = showQuestion;
+</script>
+</head>
+<body>
+<h2 id="question"></h2>
+<div id="options"></div>
+</body>
+</html>

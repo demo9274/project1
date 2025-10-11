@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temperature Converter</title>
+<style>
+body { text-align: center; margin-top: 100px; font-family: sans-serif; }
+input, button { padding: 8px; margin: 5px; }
+</style>
+<script>
+function convertToF() {
+  const c = parseFloat(document.getElementById('temp').value);
+  if (isNaN(c)) return alert("Enter a number!");
+  document.getElementById('result').textContent = (c * 9/5 + 32).toFixed(2) + " °F";
+}
+function convertToC() {
+  const f = parseFloat(document.getElementById('temp').value);
+  if (isNaN(f)) return alert("Enter a number!");
+  document.getElementById('result').textContent = ((f - 32) * 5/9).toFixed(2) + " °C";
+}
+</script>
+</head>
+<body>
+<h2>Temperature Converter</h2>
+<input type="number" id="temp" placeholder="Enter temperature">
+<br>
+<button onclick="convertToF()">Convert to Fahrenheit</button>
+<button onclick="convertToC()">Convert to Celsius</button>
+<p id="result"></p>
+</body>
+</html>
