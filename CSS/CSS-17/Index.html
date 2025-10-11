@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css selector</title>
+    <style>
+       /* Element Selector*/
+        div{
+            background-color: red;
+        } 
+
+        /* Class Selector*/
+        .red{
+            background-color: red;
+        }
+
+        /* Id Selector*/
+        #id{
+            background-color: green;
+        }
+        /* Child Selector*/
+        div >p{
+            color: blue;
+            background-color: brown;
+        }
+         /* descendint Selector*/
+        div p {
+            color: blue;
+            background-color: brown;
+        }
+        /* Universal selector*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /*Pseudo Selector*/
+        a:visited{
+            color: yellow;
+        }
+        a:link{
+            color: green;
+        }
+        a:active{
+            background-color: red;
+        }
+        a:hover{
+            background-color: aqua;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div>
+        I am Div
+    </div>
+    <div class="red">
+        Hello Good Monrning
+    </div>
+    <div id="id">
+        This is Id Tag
+        <p>I am a Para inside them</p>
+    </div>
+    <a href="Google.com1">go to Google3</a>
+    <a href="facebok.com3">go to facebook4</a>
+
+</body>
+</html>
