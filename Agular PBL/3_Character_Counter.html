@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Character Counter</title>
+</head>
+<body>
+
+      <h3>Character Counter</h3>
+      <textarea id="text" oninput="countChars()" maxlength="100"></textarea>
+      <p id="count">Characters typed: 0 / 100</p>
+<script>
+function countChars() {
+  let text = document.getElementById("text").value.length;
+  document.getElementById("count").innerText = "Characters typed: " + text + " / 100";
+}
+</script>
+</body></html>

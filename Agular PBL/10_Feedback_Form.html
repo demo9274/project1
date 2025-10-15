@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Feedback Form</title>
+  <style>
+    body { 
+      text-align: center; 
+      font-family: Arial; 
+      margin-top: 30px; 
+    }
+    input, textarea, select, button { 
+      margin: 5px; 
+      padding: 5px; 
+      width: 200px;
+    }
+    textarea { height: 80px; }
+    button { width: auto; }
+  </style>
+</head>
+<body>
+  <h2>Feedback Form</h2>
+  <input id="name" placeholder="Name"><br>
+  <input id="email" placeholder="Email"><br>
+  Rating:
+  <select id="rate">
+    <option value="">Select</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+  </select><br>
+  <textarea id="comment" placeholder="Your Comments"></textarea><br>
+  <button onclick="submitForm()">Submit</button>
+
+  <script>
+    function submitForm() {
+      let n = document.getElementById('name').value;
+      let e = document.getElementById('email').value;
+      let r = document.getElementById('rate').value;
+      let c = document.getElementById('comment').value;
+
+      if (n && e && r && c) {
+        alert("Thank you for your feedback!");
+      } else {
+        alert("Please fill all fields!");
+      }
+    }
+  </script>
+</body>
+</html>

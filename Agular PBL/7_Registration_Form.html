@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration</title>
+  <style>
+    body { text-align:center; font-family:Arial; margin-top:30px; }
+    input, select { margin:5px; padding:5px; }
+  </style>
+</head>
+<body>
+  <h3>College Event Registration</h3>
+  <input id="name" placeholder="Name"><br>
+  <input id="email" placeholder="Email"><br>
+  <select id="gender">
+    <option value="">Gender</option><option>Male</option><option>Female</option>
+  </select><br>
+  <input id="dept" placeholder="Department"><br>
+  <button onclick="reg()">Register</button>
+
+  <script>
+    function reg() {
+      const n = document.getElementById('name').value;
+      const e = document.getElementById('email').value;
+      const g = document.getElementById('gender').value;
+      const d = document.getElementById('dept').value;
+      alert(n && e && g && d ? "Registered Successfully!" : "Please fill all fields!");
+    }
+  </script>
+</body>
+</html>
